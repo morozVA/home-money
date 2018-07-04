@@ -6,14 +6,22 @@ import {Observable} from "rxjs/Observable";
 
 @Injectable()
 
-export class CategoriesService extends BaseApi{
+export class CategoriesService extends BaseApi {
 
-  constructor(public http: Http){
+  constructor(public http: Http) {
     super(http);
   }
 
   addCategory(category: Category): Observable<Category> {
     return this.post('categories', category);
+  }
+
+  getCategories(): Observable<Category[]> {
+    return this.get('categories');
+  }
+
+  updateCategory(category: Category): Observable<Category> {
+    return this.put(`categories/${category.id}`, category);
   }
 
 }
