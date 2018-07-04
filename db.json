@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 104500,
     "currency": "RUB"
   },
   "categories": [
@@ -34,7 +34,7 @@
       "capacity": 7000
     },
     {
-      "name": "Новая 2",
+      "name": "Новая",
       "capacity": 1200,
       "id": 4
     }
@@ -79,6 +79,14 @@
       "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "income",
+      "amount": 5000,
+      "category": 3,
+      "date": "04.07.2018 22:37:48",
+      "description": "продажа машины",
+      "id": 6
     }
   ]
 }

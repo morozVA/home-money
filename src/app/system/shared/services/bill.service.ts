@@ -6,9 +6,9 @@ import {BaseApi} from "../../../shared/core/base.api";
 
 @Injectable()
 
-export class BillService extends BaseApi{
+export class BillService extends BaseApi {
 
-  constructor(public http: Http){
+  constructor(public http: Http) {
     super(http);
   }
 
@@ -16,7 +16,11 @@ export class BillService extends BaseApi{
     return this.get('bill');
   }
 
-  getCurrency(): Observable<any>{
+  updateBill(bill: Bill): Observable<Bill> {
+    return this.put('bill', bill);
+  }
+
+  getCurrency(): Observable<any> {
     return this.http.get('http://data.fixer.io/api/latest?access_key=adf371feae5fd7e484973b1fa6bb25e7&symbols=USD,AUD,CAD,PLN,BYN&format=1')
       .map((response: Response) => response.json());
   }
