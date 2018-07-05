@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 104500,
+    "value": 94500,
     "currency": "RUB"
   },
   "categories": [
@@ -87,6 +87,14 @@
       "date": "04.07.2018 22:37:48",
       "description": "продажа машины",
       "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 3,
+      "date": "05.07.2018 21:57:53",
+      "description": "Нужно",
+      "id": 7
     }
   ]
 }
