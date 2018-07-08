@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 
-import { UsersService } from '../../shared/services/users.service';
-import { User } from '../../shared/models/user.model';
-import { Message } from '../../shared/models/message.model';
-import { AuthService } from '../../shared/services/auth.service';
+import {UsersService} from '../../shared/services/users.service';
+import {User} from '../../shared/models/user.model';
+import {Message} from '../../shared/models/message.model';
+import {AuthService} from '../../shared/services/auth.service';
 
 @Component({
   selector: 'wfm-login',
@@ -32,6 +32,11 @@ export class LoginComponent implements OnInit {
           this.showMessage({
             text: 'Теперь вы можете зайти в систему',
             type: 'success'
+          });
+        } else if (params['accessDenied']) {
+          this.showMessage({
+            text: 'Для работы с системой вам нужно залогиниться',
+            type: 'warning'
           });
         }
       });
