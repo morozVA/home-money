@@ -11,12 +11,16 @@ export class EventsService extends BaseApi {
     super(http);
   }
 
-  addEvent(event: WFMEvent): Observable<WFMEvent>{
+  addEvent(event: WFMEvent): Observable<WFMEvent> {
     return this.post('events', event);
   }
 
-  getEvents(): Observable<WFMEvent[]>{
+  getEvents(): Observable<WFMEvent[]> {
     return this.get('events');
+  }
+
+  getEventById(id: string): Observable<WFMEvent> {
+    return this.get(`events/${id}`);
   }
 
 }
